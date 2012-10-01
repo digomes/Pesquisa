@@ -1,0 +1,154 @@
+/* 
+    Document   : painel
+    Created on : 24/09/2012, 17:17:59
+    Author     : diego
+    Description:
+    Purpose of the stylesheet follows.
+*/
+
+/*CSS Reset*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+        text-decoration: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+header{
+    margin: 0 5px 5px 5px;
+    height: 150px;
+    min-width: 1024px;
+    background-color: #70aedd;
+}
+aside{
+    margin: 0 5px 5px 5px;
+    padding: 0;
+    float: left;
+    min-width: 180px;
+    min-height: 100%;
+    background-color: #F7F7F7;
+    display: block;
+    
+    background: -moz-linear-gradient(top, #E8E8E8 1%, #F7F7F7 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#E8E8E8), color-stop(100%,#4a4a4a));
+    background: -webkit-linear-gradient(top, #E8E8E8 1%,#F7F7F7 100%);
+    background: -o-linear-gradient(top, #E8E8E8 1%,#F7F7F7 100%);
+    background: -ms-linear-gradient(top, #E8E8E8 1%,#F7F7F7 100%);
+    background: linear-gradient(top, #E8E8E8 1%,#F7F7F7 100%);
+}
+
+aside ul li > a:link,
+aside ul li > a:visited{
+    margin: 3px;
+    padding: 0;
+    min-width: 180px;
+    display: block;
+    position: relative;
+    text-align: center;
+    height: 32px;
+    color: #20a4ca;
+    font: bold 12px/32px Arial, sans-serif;
+    
+    background: #20a4ca;
+    background: -moz-linear-gradient(top, #C7C7C7 1%, #F7F7F7 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#F7F7F7), color-stop(100%,#4a4a4a));
+    background: -webkit-linear-gradient(top, #C7C7C7 1%,#F7F7F7 100%);
+    background: -o-linear-gradient(top, #C7C7C7 1%,#F7F7F7 100%);
+    background: -ms-linear-gradient(top, #C7C7C7 1%,#F7F7F7 100%);
+    background: linear-gradient(top, #C7C7C7 1%,#F7F7F7 100%);
+    
+    -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .1), 0px 1px 0px 0px rgba(0,0,0, .1);
+    -moz-box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .1), 0px 1px 0px 0px rgba(0,0,0, .1);
+    box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .1), 0px 1px 0px 0px rgba(0,0,0, .1);
+
+}
+
+aside ul li > a:hover,
+aside ul li > a:target{
+    
+ color: #F7F7F7;
+ 
+ text-shadow: 1px 1px 1px rgba(255,255,255, .2);
+ 
+ 
+ 
+ background: #20a4ca;
+ background: -moz-linear-gradient(top, #20a4ca 1%, #47b5d4 100%);
+ background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#20a4ca), color-stop(100%,#47b5d4));
+ background: -webkit-linear-gradient(top, #20a4ca 1%,#47b5d4 100%);
+ background: -o-linear-gradient(top, #20a4ca 1%,#47b5d4 100%);
+ background: -ms-linear-gradient(top, #20a4ca 1%,#47b5d4 100%);
+ background: linear-gradient(top, #20a4ca 1%,#47b5d4 100%);
+ 
+ 
+ -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .1), 0px 1px 0px 0px rgba(0,0,0, .1);
+ -moz-box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .1), 0px 1px 0px 0px rgba(0,0,0, .1);
+ box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .1), 0px 1px 0px 0px rgba(0,0,0, .1);
+}
+
+section {
+    margin: 0 5px 5px 0;
+    padding: 5px;
+    float: right;
+    min-height: 100%;
+    min-width: 980px;
+    background: #F7F7F7;
+    
+    
+    background: -moz-linear-gradient(top, #E8E8E8 1%, #F7F7F7 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#E8E8E8), color-stop(100%,#4a4a4a));
+    background: -webkit-linear-gradient(top, #E8E8E8 1%,#F7F7F7 100%);
+    background: -o-linear-gradient(top, #E8E8E8 1%,#F7F7F7 100%);
+    background: -ms-linear-gradient(top, #E8E8E8 1%,#F7F7F7 100%);
+    background: linear-gradient(top, #E8E8E8 1%,#F7F7F7 100%);
+}
+
+footer{
+    clear: both;
+    min-width: 1024px;
+    min-height: 50px;
+    margin: 0 5px 0 5px;
+    padding: 10px;
+    
+    background-color: #70aedd;
+    
+}
