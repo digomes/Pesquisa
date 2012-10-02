@@ -35,7 +35,6 @@ header("Location: ../tpvision/login.php");
 exit;
 }
 
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -53,22 +52,40 @@ exit;
     <body>
 <div id="content">
     <h1>Pesquisa</h1>
-       <div id="wrapper">        
-            <div id="steps">
-<?php
 
+       <div id="wrapper">  
+<?php
 require("includes/form.class.php");
 require("includes/funcoes.class.php");
 
 $func = new recordset();
 $func->conexao();
 
+$idQuestion = intval($_GET['id']);
+
+$selConf = $func->seleciona("SELECT * FROM confirma WHERE user_id = '$id' AND id_quest = '$idQuestion'");
+    
+    
+    $nrLinhas = mysql_num_rows($selConf);
+    
+
+    if($nrLinhas == '1'){
+        echo '<div class="form-msg-info">
+                <h2>Obrigado por ter participado de nossa pesquisa !</h2>
+              </div>';
+        exit;
+       
+    }
+
+    //iniciio da div steps
+echo '<div id="steps">';
+
 
 
 $a = new GEN_FORM();
 
 
-$idQuestion = intval($_GET['id']);
+
 //$select = $func->seleciona("SELECT q.*, o.* FROM questions q INNER JOIN options o ON q.id = o.ques_id ");
 $select = $func->seleciona("SELECT p.id as idqs, p.*, f.* FROM formularios f INNER JOIN perguntas p ON f.id = p.form_id WHERE f.id = '$idQuestion'");
 $nrQuestions = mysql_num_rows($select);
@@ -228,7 +245,7 @@ $a->setCloseForm();
                 
             }
                 $delNull = $func->seleciona("DELETE FROM votos WHERE perg_id = '0'");
-                $confirmaPesquisa = $func->seleciona("INSERT INTO confirma (id, user_id, conf) VALUES ('', '$id', '1')");
+                $confirmaPesquisa = $func->seleciona("INSERT INTO confirma (id, user_id, id_quest, conf) VALUES ('', '$id', '$idQuestion', '1')");
             //print_r($post);
            
             
