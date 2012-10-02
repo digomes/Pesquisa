@@ -17,7 +17,7 @@ echo "<legend>Cadastro de Pesquisa</legend>";
 echo '<div class="grid-10-12">';
 echo '<label for="">Selecione o Formulario <em class="formee-req">*</em></label>';
 
-$selForm = $func->seleciona("Select * from formularios ORDER BY id ASC");
+$selForm = $func->seleciona("Select * from formularios ORDER BY id DESC");
 echo '<select name="formulario" class="formee-small">';
 while($resForm = mysql_fetch_assoc($selForm)){
     
