@@ -16,7 +16,7 @@ class recordset{
     public $usuario = 'root';
     public $senha = '210190';
     public $hostname = 'localhost';
-    
+        
     //funcao de conexao ao BD
     function conexao(){
         header('Content-Type: text/html; charset=utf-8');
@@ -90,6 +90,6 @@ class recordset{
         
         $this->seleciona($sql);
     }
-    
+      
 }
 ?>
